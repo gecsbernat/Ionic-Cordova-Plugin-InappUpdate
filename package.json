@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "name": "cordova-plugin-in-app-update",
+  "name": "cordova-plugin-inappupdate",
   "cordova_name": "InappUpdate",
   "description": "",
   "license": "",

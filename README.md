@@ -14,7 +14,7 @@ https://developer.android.com/guide/playcore/in-app-updates
 
 ### Installation
 ```sh
-$ ionic cordova plugin add [PLUGIN.GIT OR FOLDER]
+$ ionic cordova plugin add https://github.com/gecsbernat/Ionic-Cordova-Plugin-InappUpdate.git
 ```
 
 ### Usage
