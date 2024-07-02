@@ -1,17 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
-<plugin 
-id="cordova-plugin-inappupdate" 
-version="1.0.0" 
-xmlns="http://apache.org/cordova/ns/plugins/1.0" 
-xmlns:android="http://schemas.android.com/apk/res/android">
-
+<plugin id="cordova-plugin-inappupdate" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
   <name>InappUpdate</name>
   <repo>https://github.com/gecsbernat/Ionic-Cordova-Plugin-InappUpdate</repo>
 
   <js-module name="InappUpdate" src="www/InappUpdate.js">
     <clobbers target="InappUpdate" />
   </js-module>
-
   <platform name="android">
     <config-file parent="/*" target="res/xml/config.xml">
       <feature name="InappUpdate">
@@ -20,7 +14,6 @@ xmlns:android="http://schemas.android.com/apk/res/android">
     </config-file>
     <config-file parent="/*" target="AndroidManifest.xml"></config-file>
     <source-file src="src/android/InappUpdate.java" target-dir="src/cordova/plugin/inappupdate" />
-	  <framework custom="true" src="src/android/android-play-core.gradle" type="gradleReference" />	
+    <framework custom="true" src="src/android/android-play-core.gradle" type="gradleReference" />
   </platform>
-  
 </plugin>

@@ -10,9 +10,11 @@ https://developer.android.com/guide/playcore/in-app-updates
 - download and install update
 
 ### Platforms
+
 - android
 
 ### Installation
+
 ```sh
 $ ionic cordova plugin add https://github.com/gecsbernat/Ionic-Cordova-Plugin-InappUpdate.git
 ```
@@ -24,19 +26,25 @@ $ ionic cordova plugin add https://github.com/gecsbernat/Ionic-Cordova-Plugin-In
 declare const InappUpdate: any;
 
 // check for update
-InappUpdate.check((success: any) => {
-  if (success !== 'false') {
-    // success = versionCode to update
-    console.log('available versionCode:', success);
-    InappUpdate.update('immediate' /* OR 'flexible' */, (success: any) => {
-      console.log(success);
-    }, (error: any) => {
-      console.log(error);
-    });
-  } else {
-    console.log('no update available');
-  }
-}, (error: any) => {
+InappUpdate.check(
+  (success: any) => {
+    if (success !== "false") {
+      // success = versionCode to update
+      console.log("available versionCode:", success);
+      InappUpdate.update(
+        (success: any) => {
+          console.log(success);
+        },
+        (error: any) => {
+          console.log(error);
+        }
+      );
+    } else {
+      console.log("no update available");
+    }
+  },
+  (error: any) => {
     console.log(error);
-});
+  }
+);
 ```
